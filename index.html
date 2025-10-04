@@ -4,79 +4,152 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dhowfiq D — Data Analyst Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    /* Global Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f4f7fa;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f4f7fa, #e2e8f0);
+      color: #222;
+      scroll-behavior: smooth;
     }
+    a { text-decoration: none; color: inherit; }
+
+    /* Header with animated gradient */
     header {
-      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      background: linear-gradient(-45deg, #6a11cb, #2575fc, #f953c6, #b91d73);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
       color: white;
-      padding: 40px;
+      padding: 60px 20px;
       text-align: center;
+      position: relative;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
-    header p {
-      margin-top: 8px;
-      font-size: 1.2em;
+    header h1 { font-size: 3em; margin-bottom: 10px; }
+    header p { font-size: 1.3em; margin-bottom: 20px; }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      margin: 5px;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.3);
+      transition: 0.3s;
+      font-weight: 600;
     }
+    .btn:hover { 
+      background: rgba(255,255,255,0.4);
+      transform: scale(1.05);
+    }
+
+    /* Navigation */
     nav {
-      background: #222;
-      padding: 10px;
+      background: rgba(34,34,34,0.9);
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
       text-align: center;
     }
     nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
+      color: #fff;
+      margin: 0 20px;
       font-weight: 500;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-    section h2 {
-      color: #4e54c8;
-      margin-bottom: 15px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 5px;
-      background: #4e54c8;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
       transition: 0.3s;
     }
-    .btn:hover {
-      background: #333;
+    nav a:hover { color: #f953c6; }
+
+    /* Sections */
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 30px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.05);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
     }
+    section.visible { opacity: 1; transform: translateY(0); }
+    section h2 {
+      color: #6a11cb;
+      margin-bottom: 20px;
+      font-size: 2em;
+      position: relative;
+    }
+    section h2::after {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 4px;
+      background: #f953c6;
+      bottom: -5px;
+      left: 0;
+      border-radius: 2px;
+    }
+
+    /* Skills bars */
+    .skill {
+      margin: 15px 0;
+    }
+    .skill-name { font-weight: 600; margin-bottom: 5px; }
+    .skill-bar {
+      width: 100%;
+      height: 15px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .skill-bar-fill {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, #6a11cb, #f953c6);
+      border-radius: 10px;
+      transition: width 1.5s ease;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+
+    /* Scroll to top */
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      padding: 12px 15px;
+      background: #6a11cb;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      display: none;
+      transition: 0.3s;
+      z-index: 100;
+    }
+    #topBtn:hover { background: #f953c6; }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Dhowfiq D</h1>
     <p>Data Analyst | Data Science Enthusiast</p>
@@ -104,13 +177,10 @@
 
   <section id="skills">
     <h2>Skills</h2>
-    <ul>
-      <li><b>Programming:</b> Python, SQL</li>
-      <li><b>Frameworks:</b> Pandas, NumPy, Scikit-Learn</li>
-      <li><b>Tools:</b> Power BI, Tableau, Excel, PowerPoint, MySQL, PostgreSQL</li>
-      <li><b>Platforms:</b> Jupyter Notebook, PyCharm, VS Code</li>
-      <li><b>Soft Skills:</b> Problem Solving, Critical Thinking, Communication</li>
-    </ul>
+    <div class="skill"><div class="skill-name">Python</div><div class="skill-bar"><div class="skill-bar-fill" data-fill="90%"></div></div></div>
+    <div class="skill"><div class="skill-name">SQL</div><div class="skill-bar"><div class="skill-bar-fill" data-fill="85%"></div></div></div>
+    <div class="skill"><div class="skill-name">Power BI</div><div class="skill-bar"><div class="skill-bar-fill" data-fill="80%"></div></div></div>
+    <div class="skill"><div class="skill-name">Tableau</div><div class="skill-bar"><div class="skill-bar-fill" data-fill="75%"></div></div></div>
   </section>
 
   <section id="projects">
@@ -157,6 +227,42 @@
   <footer>
     <p>© 2025 Dhowfiq D | Powered by GitHub Pages</p>
   </footer>
+
+  <button id="topBtn" onclick="scrollToTop()">↑</button>
+
+  <script>
+    // Scroll animations for sections
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    sections.forEach(section => observer.observe(section));
+
+    // Skill bar animation
+    const skillBars = document.querySelectorAll('.skill-bar-fill');
+    const skillObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          const width = entry.target.getAttribute('data-fill');
+          entry.target.style.width = width;
+        }
+      });
+    }, { threshold: 0.5 });
+    skillBars.forEach(bar => skillObserver.observe(bar));
+
+    // Scroll to top button
+    const topBtn = document.getElementById('topBtn');
+    window.onscroll = () => { 
+      topBtn.style.display = document.documentElement.scrollTop > 300 ? 'block' : 'none';
+    }
+    function scrollToTop() { window.scrollTo({ top:0, behavior:'smooth' }); }
+  </script>
+
 </body>
 </html>
+
 
