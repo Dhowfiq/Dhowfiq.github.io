@@ -3,160 +3,160 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Portfolio</title>
+  <title>Dhowfiq D — Data Analyst Portfolio</title>
   <style>
-    :root {
-      --primary: #4e54c8;
-      --accent: #8f94fb;
-      --bg: #f5f7fa;
-      --text: #333;
-      --white: #fff;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    html, body {
-      height: 100%;
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-    }
-    a {
-      color: inherit;
-      text-decoration: none;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f4f7fa;
+      color: #333;
     }
     header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      background: rgba(255,255,255,0.9);
-      display: flex;
-      justify-content: flex-end;
-      padding: 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      z-index: 10;
-    }
-    header a {
-      margin-left: 20px;
-      font-weight: 500;
-    }
-    section {
-      padding: 100px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    #hero {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: var(--white);
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      color: white;
+      padding: 40px;
       text-align: center;
-      flex-direction: column;
     }
-    #hero h1 {
+    header h1 {
+      margin: 0;
       font-size: 2.5em;
-      margin-bottom: 0.5em;
     }
-    #hero p {
+    header p {
+      margin-top: 8px;
       font-size: 1.2em;
     }
-    .social-buttons {
-      margin-top: 30px;
+    nav {
+      background: #222;
+      padding: 10px;
+      text-align: center;
     }
-    .social-buttons a {
-      display: inline-block;
-      margin: 0 10px;
-      padding: 12px 20px;
-      border: 2px solid var(--white);
-      border-radius: 6px;
-      transition: background 0.3s, color 0.3s;
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
     }
-    .social-buttons a:hover {
-      background: var(--white);
-      color: var(--primary);
+    nav a:hover {
+      text-decoration: underline;
     }
-
-    .content-title {
-      margin-bottom: 20px;
-      font-size: 1.8em;
-      color: var(--primary);
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
-    .skills-list {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
+    section h2 {
+      color: #4e54c8;
+      margin-bottom: 15px;
     }
-    .skills-list li {
-      background: var(--white);
-      color: var(--text);
-      padding: 8px 16px;
-      margin: 6px;
-      border-radius: 4px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    ul {
+      padding-left: 20px;
     }
     footer {
+      background: #222;
+      color: white;
       text-align: center;
-      padding: 40px 20px;
-      color: #666;
+      padding: 20px;
+      margin-top: 40px;
     }
-
-    /* Smooth scroll */
-    html {
-      scroll-behavior: smooth;
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px;
+      background: #4e54c8;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #333;
     }
   </style>
 </head>
-
 <body>
   <header>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#connect">Connect</a>
+    <h1>Dhowfiq D</h1>
+    <p>Data Analyst | Data Science Enthusiast</p>
+    <div>
+      <a class="btn" href="https://www.linkedin.com/in/dhowfiq/" target="_blank">LinkedIn</a>
+      <a class="btn" href="https://wa.me/919578190766" target="_blank">WhatsApp</a>
+      <a class="btn" href="mailto:dhowfiq786@gmail.com">Email</a>
+    </div>
   </header>
 
-  <section id="hero">
-    <h1>Your Name</h1>
-    <p>Something like: “Web Developer & Tech Enthusiast”</p>
-    <div class="social-buttons">
-      <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
-      <a href="https://wa.me/YOURE164NUMBER" target="_blank">WhatsApp</a>
-    </div>
-  </section>
+  <nav>
+    <a href="#summary">Summary</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <section id="about">
-    <div class="content-title">About Me</div>
-    <p>
-      Write a few sentences: who you are, what you do, your interests. Keep it crisp.
-    </p>
+  <section id="summary">
+    <h2>Summary</h2>
+    <p>Data analyst with expertise in data visualization, wrangling, statistical analysis, and predictive modeling. Proficient in SQL, Power BI, Tableau, and Excel, with hands-on experience in dashboarding. Strong problem-solving skills and eager to apply analytical expertise in a data-driven environment.</p>
   </section>
 
   <section id="skills">
-    <div class="content-title">Skills / What I Do</div>
-    <ul class="skills-list">
-      <li>HTML & CSS</li>
-      <li>JavaScript</li>
-      <li>Frontend Frameworks</li>
-      <li>Backend / APIs</li>
-      <li>Some other skill</li>
-      <!-- add more -->
+    <h2>Skills</h2>
+    <ul>
+      <li><b>Programming:</b> Python, SQL</li>
+      <li><b>Frameworks:</b> Pandas, NumPy, Scikit-Learn</li>
+      <li><b>Tools:</b> Power BI, Tableau, Excel, PowerPoint, MySQL, PostgreSQL</li>
+      <li><b>Platforms:</b> Jupyter Notebook, PyCharm, VS Code</li>
+      <li><b>Soft Skills:</b> Problem Solving, Critical Thinking, Communication</li>
     </ul>
   </section>
 
-  <section id="connect">
-    <div class="content-title">Connect With Me</div>
-    <p>Feel free to message me on WhatsApp or LinkedIn!</p>
-    <div class="social-buttons">
-      <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
-      <a href="https://wa.me/YOURE164NUMBER" target="_blank">WhatsApp</a>
-    </div>
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><b>Spotify Data Analysis:</b> SQL analysis of tracks, albums, and artists to extract insights on genres, users, and regional patterns.</li>
+      <li><b>Global Food Wastage Analysis:</b> RFM analysis on 50,000+ customers, improving targeted marketing by 25% retention.</li>
+      <li><b>Interactive Sales Dashboard:</b> Excel dashboard with KPIs, Power Query, and pivot tables for state-wise sales/profit analysis.</li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <p><b>Data Science Intern — Prodigy Infotech (June 2024 - July 2024)</b></p>
+    <ul>
+      <li>Developed ML models to predict customer churn, boosting retention accuracy by 20%.</li>
+      <li>Analyzed large datasets using Python & SQL, improving decision-making speed by 30%.</li>
+      <li>Created Power BI dashboards to visualize KPIs for business insights.</li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p><b>Karunya Institute of Technology and Science</b><br>Master of Artificial Intelligence and Data Science (Aug 2023 – May 2025)</p>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Google Data Analytics Specialization — Coursera</li>
+      <li>Foundation of Data Science — Coursera</li>
+      <li>Tata Forage: Data Visualization</li>
+      <li>Other verified certificates on <a href="https://www.vitaely.me/profile" target="_blank">Vitaely</a></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 <a href="mailto:dhowfiq786@gmail.com">dhowfiq786@gmail.com</a></p>
+    <p>📞 <a href="tel:+919578190766">+91 9578190766</a></p>
+    <p>🔗 <a href="https://www.linkedin.com/in/dhowfiq/" target="_blank">LinkedIn Profile</a></p>
   </section>
 
   <footer>
-    &copy; 2025 Your Name
+    <p>© 2025 Dhowfiq D | Powered by GitHub Pages</p>
   </footer>
 </body>
 </html>
+
