@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Portfolio</title>
+  <style>
+    :root {
+      --primary: #4e54c8;
+      --accent: #8f94fb;
+      --bg: #f5f7fa;
+      --text: #333;
+      --white: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(255,255,255,0.9);
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+    header a {
+      margin-left: 20px;
+      font-weight: 500;
+    }
+    section {
+      padding: 100px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    #hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: var(--white);
+      text-align: center;
+      flex-direction: column;
+    }
+    #hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
+    #hero p {
+      font-size: 1.2em;
+    }
+    .social-buttons {
+      margin-top: 30px;
+    }
+    .social-buttons a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 12px 20px;
+      border: 2px solid var(--white);
+      border-radius: 6px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .social-buttons a:hover {
+      background: var(--white);
+      color: var(--primary);
+    }
+
+    .content-title {
+      margin-bottom: 20px;
+      font-size: 1.8em;
+      color: var(--primary);
+    }
+    .skills-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .skills-list li {
+      background: var(--white);
+      color: var(--text);
+      padding: 8px 16px;
+      margin: 6px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #666;
+    }
+
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#connect">Connect</a>
+  </header>
+
+  <section id="hero">
+    <h1>Your Name</h1>
+    <p>Something like: “Web Developer & Tech Enthusiast”</p>
+    <div class="social-buttons">
+      <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
+      <a href="https://wa.me/YOURE164NUMBER" target="_blank">WhatsApp</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="content-title">About Me</div>
+    <p>
+      Write a few sentences: who you are, what you do, your interests. Keep it crisp.
+    </p>
+  </section>
+
+  <section id="skills">
+    <div class="content-title">Skills / What I Do</div>
+    <ul class="skills-list">
+      <li>HTML & CSS</li>
+      <li>JavaScript</li>
+      <li>Frontend Frameworks</li>
+      <li>Backend / APIs</li>
+      <li>Some other skill</li>
+      <!-- add more -->
+    </ul>
+  </section>
+
+  <section id="connect">
+    <div class="content-title">Connect With Me</div>
+    <p>Feel free to message me on WhatsApp or LinkedIn!</p>
+    <div class="social-buttons">
+      <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
+      <a href="https://wa.me/YOURE164NUMBER" target="_blank">WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Your Name
+  </footer>
+</body>
+</html>
